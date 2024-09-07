@@ -25,7 +25,7 @@ pipeline {
         stage('Sonarqube Analysis') {
             steps {
                 dir('Application-Code/three-tier-project') {
-                    withSonarQubeEnv('sonar-scanner') {
+                    withSonarQubeEnv('sonar-qube') {
                         sh ''' $SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectName=frontend \
                         -Dsonar.projectKey=frontend '''
